@@ -1,0 +1,167 @@
+/*
+http://www.corgdesign.com
+License: none (public domain)
+*/
+
+/* Dropdown menu page */
+
+.main-navigation {
+	clear: both;
+	display: block;
+	width: 100%;
+}
+
+.main-navigation ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+.main-navigation li {
+	position: relative;
+}
+
+.main-navigation a {
+	display: block;
+	text-decoration: none;
+}
+
+.main-navigation ul a {
+	padding: 15px;
+		-moz-transition: background-color 0.5s;
+		-webkit-transition: background-color 0.5s;
+		-o-transition: background-color 0.5s;
+	transition: background-color 0.5s;
+}
+
+.main-navigation ul a:hover {
+	background-color: #cecece;
+}
+
+.main-navigation ul ul {
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	float: left;
+	position: absolute;
+	top: 1.5em;
+	left: -999em;
+	z-index: 99999;
+}
+
+.main-navigation ul ul ul {
+	left: -999em;
+	top: 0;
+}
+
+.main-navigation ul ul a {
+	width: 200px;
+}
+
+#menu-button {
+	position: absolute;
+	top: 50px;
+	left: 60px;
+	width: 50px;
+	text-align: center;
+	z-index: 1;
+}
+
+#menu-button a {
+	display: block;
+}
+
+#menu-button a.close-menu {
+	display: none;
+}
+
+#menu-button div.bg {
+	background-color: #f5f5f5;
+	padding: 14px;
+}
+
+#menu-button div.top-bottom {
+	padding: 4px 0;
+	border-top: 4px solid;
+	border-bottom: 4px solid;
+}
+
+#menu-button div.burger {
+	display: block;
+	height: 4px;
+	background: #3f3d3d;
+}
+
+#menu-button div.menu-text {
+	font-size: 12px;
+	line-height: 16px;
+}
+
+#menu-button #menu-close {
+	display: none;
+}
+
+#site-navigation {
+	position: absolute;
+	top: 0;
+	left: 0;
+	outline: none !important;
+}
+
+#site-navigation .menu-main-menu-container,
+#site-navigation div.menu {
+	overflow: hidden;
+	width: 0;
+	max-height: 0;
+	position: absolute;
+	top: 85px;
+	left: 85px;
+	visibility: hidden;
+	opacity: 0;	
+	background-color: rgba(222, 222, 222, 0.95);
+	transition: max-height 0.5s 0.1s, width 0.75s, top 0.75s, left 0.75s, visibility 0.75s, opacity 0.75s;
+}
+
+#site-navigation:target .menu-main-menu-container,
+#site-navigation:target div.menu {
+	width: 170px;
+	max-height: 900px;
+	top: 0;
+	left: 0;
+	visibility: visible;
+	opacity: 1;
+}
+
+#site-navigation .menu-main-menu-container ul,
+#site-navigation div.menu ul {
+	width: 130px;
+	padding-top: 140px;
+	padding-left: 20px;
+	padding-bottom: 50px;
+	margin-left: -200px;
+	overflow: hidden;
+	opacity: 0;
+	transition: margin-left 0.8s 0.2s ease-in-out, opacity 0.4s;
+}
+
+#site-navigation:target .menu-main-menu-container ul,
+#site-navigation:target div.menu ul {
+	margin-left: 0;
+	opacity: 1;
+}
+
+#site-navigation .menu-main-menu-container ul li,
+#site-navigation div.menu ul li  {
+	width: 130px;
+}
+
+#site-navigation:target #menu-button a {
+	display: none;
+}
+
+#site-navigation:target #menu-button a.close-menu {
+	display: block;
+}
+
+.nav-container {
+	position: relative;
+	margin: 50px 0 0 0;
+}
